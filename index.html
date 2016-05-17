@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="2; url=/en/" />
+  </head>
+  <body data-languages="{% for lang in site.languages %}{{ lang.abbr }}{% if forloop.last == false %},{% endif %}{% endfor %}">
+    <script>
+      var languages = document.body.dataset.languages.split(',');
+      var language = navigator.language || navigator.browserLanguage; 
+      var abbr = language.substring(0,2).toLowerCase();
+      if (languages.indexOf(abbr) === -1 ) abbr = 'en';
+      document.location.href = '/' + abbr + '/';
+    </script>
+  </body>
+</html>

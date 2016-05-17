@@ -1,0 +1,24 @@
+title: Tatiana SB
+description: Portfólio de Tatiana Segueievna Balachova
+url: "http://tatianasb.ru"
+baseurl: ""
+languages:
+  - title: Português
+    abbr: pt
+  - title: English
+    abbr: en
+
+exclude: 
+  - assets/js/app.js
+  - bower.json
+  - bower_components/
+  - contrib/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - package.json
+  - README.md
+gems:
+  - jekyll-sitemap
+sass:
+  style: compressed

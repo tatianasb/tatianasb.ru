@@ -1,0 +1,28 @@
+---
+---
+
+// import bourbon
+@import '../bower_components/bourbon/app/assets/stylesheets/bourbon'
+
+// import and set neat
+$max-width: em(850)
+@import '../bower_components/neat/app/assets/stylesheets/neat'
+$desktop: new-breakpoint(min-width 768px)
+
+// import bitters & font awemose
+@import '../bower_components/bitters/app/assets/stylesheets/base'
+@import '../bower_components/font-awesome/scss/font-awesome.scss'
+
+// import jsOnlyLightbox
+@import '../bower_components/jsonlylightbox/css/lightbox.scss'
+
+// project settings
+@import 'colors'
+@import 'mixins'
+@import 'fonts'
+@import 'tags'
+
+// project styles
+@import 'blocks'
+@import 'elements'
+@import 'modifiers'

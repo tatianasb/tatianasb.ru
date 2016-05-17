@@ -1,0 +1,159 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+  {% include head.html %}
+  <body>
+
+    <!-- Navbar -->
+    <nav class="outer">
+      <div class="inner">
+         {{ page.languages }}
+
+        <ul class="language">
+          {% for lang in site.languages %}
+          <li>
+            <a href="/{{ lang.abbr }}/"{% if lang.abbr == page.lang %} class="active"{% endif %}>
+              <abbr title="{{ lang.title }}">{{ lang.abbr }}</abbr>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+
+        <ul class="menu">
+          <li>
+            <a href="#about">{{ page.menu.about }}</a>
+          </li>
+          <li>
+            <a href="#portfolio">{{ page.menu.portfolio }}</a>
+          </li>
+          <li>
+            <a href="#contact">{{ page.menu.contact }}</a>
+          </li>
+        </ul>
+
+      </div><!-- end div.inner -->
+    </nav>
+
+    <!-- Heading -->
+    <header class="outer">
+      <div class="inner">
+
+        <h1><img alt="{{ page.title }}" src="/assets/imgs/logo.png"><h1>
+
+      </div><!-- end div.inner -->
+    </header>
+
+    <!-- About me -->
+    <main class="outer">
+      <div class="inner">
+
+        <h2><a name="about" id="about">{{ page.about.title }}</a></h2>
+        <h3>{{ page.about.subtitle }}</h3>
+
+        <div class="picture">
+          <img alt="{{ page.title }}" src="/assets/imgs/tatiana.jpg">
+        </div><!-- end div.picture -->
+
+        <div class="text">{{ page.about.text }}</div><!-- end div.text -->
+
+      </div><!-- end div.inner -->
+    </main>
+
+    <!-- Skills -->
+    <section class="outer skills">
+      <div class="inner">
+
+        <h2>{{ page.skills.title }}</h2>
+
+        <ul>
+          <li>
+            <div><i class="fa fa-file-image-o" aria-hidden="true"></i></div>
+            {{ page.skills.print }}
+          </li>
+          <li>
+            <div><i class="fa fa-desktop" aria-hidden="true"></i></div>
+            {{ page.skills.web }}
+          </li>
+          <li>
+            <div><i class="fa fa-hashtag" aria-hidden="true"></i></div>
+            {{ page.skills.socialmedia }}
+          </li>
+          <li>
+            <div><i class="fa fa-umbrella" aria-hidden="true"></i></div>
+            {{ page.skills.branding }}
+          </li>
+        </ul>
+
+      </div><!-- end div.inner -->
+    </section>
+
+    <!-- Portfolio -->
+    <section class="outer portfolio">
+      <div class="inner">
+
+        <h2><a name="portfolio" id="portfolio">{{ page.portfolio.title }}</a></h2>
+        <h3>{{ page.portfolio.subtitle }}</h3>
+
+        <ul>
+
+          {% for item in page.portfolio.items %}
+          <li>
+            <img alt="{{ item.client }}"
+              data-jslghtbx-group="portfolio"
+              {% if item.description %}
+              data-jslghtbx-caption="{% if item.subcategory %}{{ item.subcategory|upcase }}{% else %}{{ item.category|upcase }}{% endif %} | <b>{{ item.label }}:</b> {{ item.client }} | {{ item.description }}"
+              {% else %}
+                data-jslghtbx-caption="{% if item.subcategory %}{{ item.subcategory|upcase }}{% else %}{{ item.category|upcase }}{% endif %}<br><b>{{ item.label }}:</b> {{ item.client }}"
+              {% endif %}
+              data-jslghtbx="/assets/imgs/portfolio/{{ item.image }}"
+              src="/assets/imgs/portfolio/{{ item.thumb }}">
+            <div class="caption">
+              {{ item.category }}
+            </div>
+          </li>
+          {% endfor %}
+
+        </ul>
+
+      </div><!-- end div.inner -->
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+      <h2><a name="contact" id="contact">{{ page.contact.title }}</a></h2>
+      <div class="outer">
+        <div class="inner">
+          <a id="hello" href="znvygb:gngvnanfo@tznvy.pbz">&#116;atia&#110;a&#115;b&#64;&#103;&#109;ail&#46;co&#109;</a>
+          <ul>
+            <li class="twitter">
+              <a href="http://twitter.com/tati_ru">
+                <i class="fa fa-twitter"></i>
+                <span>Twitter</span>
+              </a>
+            </li>
+            <li class="instagram">
+              <a href="http://instagram.com/tati_ru">
+                <i class="fa fa-instagram"></i>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li class="twitter">
+              <a href="http://linkedin.com/in/tatiru">
+                <i class="fa fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+          </ul>
+          <p>{{ page.contact.location }}</p>
+        </div><!-- end div.inner -->
+      </div><!-- end div.outer -->
+      <img alt="Tatiana SB" src="/assets/imgs/signature.png">
+    </footer>
+
+    {% include javascripts.html %}
+
+  </body>
+</html>

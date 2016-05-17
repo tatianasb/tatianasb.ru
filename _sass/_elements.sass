@@ -1,0 +1,105 @@
+nav
+  a
+    color: $black
+    font-size: .6rem
+    text-transform: uppercase
+    +media($desktop)
+      font-size: .8rem
+
+header
+  text-align: center
+  img
+    width: 66.6%
+    +media($desktop)
+      width: 50%
+
+main
+  .text, .picture
+    margin-top: 1rem
+  .text
+    color: $tiffany-blue
+    text-align: justify
+    a
+      color: shade($tiffany-blue, 30%)
+
+.skills
+  color: $white
+  font-size: 1rem
+  font-weight: $bold-weight
+  margin-top: 1rem
+  text-transform: uppercase
+  h2
+    color: $white
+    &:after
+      border-color: $white
+  li
+    text-align: center
+    div
+      border: rem(1) solid $white
+      margin: 0 auto
+      padding-bottom: 70%
+      position: relative
+      width: 70%
+    i
+      +transform(translate(-50%, -50%))
+      display: block
+      font-size: 3rem
+      left: 50%
+      position: absolute
+      top: 50%
+
+.portfolio
+  .caption
+    color: $gray
+    text-align: right
+    text-transform: uppercase
+
+footer
+  h2:after
+    border: none
+  a
+    color: $gray
+    font-size: 1.2rem
+  li 
+    a
+      +size(2rem)
+      background-color: $gray
+      border-radius: 50%
+      color: $white
+      line-height: 2rem
+      padding-top: .2rem 
+      margin-left: 1rem
+    &:first-child a
+      margin-left: 0
+
+  span
+    display: none
+
+#jslghtbx-close
+  color: rgba(0, 0, 0, 0)
+  font-size: rem(1)
+  &:after
+    color: $white
+    content: '\f00d'
+    font-family: FontAwesome
+    font-size: 1rem
+
+.jslghtbx-caption
+  color: $tiffany-blue
+  text-align: center
+  a
+    color: $tiffany-blue
+    text-decoration: underline
+
+.jslghtbx-no-img
+  &.jslghtbx-next, &.jslghtbx-prev
+    border: 0
+    &:after
+      color: $white
+      content: '\f105'
+      font-family: FontAwesome
+      font-size: 2rem
+      +media($desktop)
+        font-size: 5rem
+  &.jslghtbx-prev:after
+    content: '\f104'

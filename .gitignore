@@ -1,0 +1,17 @@
+# Ruby, Jekyll & preprocessors
+.jekyll-metadata
+.ruby-version
+.sass-cache
+_site/
+
+# Node and Bower files
+bower_components/
+node_modules/
+assets/fonts/
+
+# Processed JS
+assets/js/app.min.js
+
+# System
+.DS_Store
+"Icon\r"

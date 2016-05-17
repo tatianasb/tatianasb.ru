@@ -1,0 +1,101 @@
+.inner
+  +outer-container
+  padding: 0 .5rem
+
+nav
+  ul
+    +display(flex)
+    +justify-content(flex-end)
+    margin-top: .5rem
+  a
+    display: inline-block
+    border: rem(1px) solid $black
+    padding: .3rem .25rem .2rem .25rem
+    margin-left: .5rem
+    +media($desktop)
+      border-width: rem(1.3px)
+
+header
+  margin-top: 4rem
+
+main
+  margin-top: 4rem
+  .picture
+    +span-columns(8)
+    +shift(2)
+    +clearfix
+    +media($desktop)
+      +span-columns(4)
+      +shift(0)
+  .text
+    +span-columns(12)
+    +media($desktop)
+      +span-columns(8)
+
+.skills
+  background-color: $tiffany-blue
+  padding: 1.5rem 0
+  ul
+    margin-top: 1.5rem
+  li
+    +span-columns(6)
+    +omega(2n)
+    +media($desktop)
+      +span-columns(3)
+      +omega-reset(2n)
+      &:last-child
+        margin-right: 0
+  i
+    margin-bottom: 1.5rem
+
+.portfolio
+  h2
+    margin-top: 1.5rem
+  li
+    +span-columns(6)
+    +omega(2n)
+    +media($desktop)
+      +span-columns(4)
+      +omega-reset(2n)
+      +omega(3n)
+    margin-top: 1rem
+    position: relative
+    &:last-child
+      display: none
+      +media($desktop)
+        display: block
+  .caption
+    background-color: rgba(255, 255, 255, .85)
+    bottom: 2rem
+    padding: .5rem
+    position: absolute
+    width: 100%
+    z-index: 1
+  .category
+    display: block
+
+footer
+  margin-top: 3rem
+  padding-bottom: 1.5rem
+  text-align: center
+  .outer
+    border: 0 solid $tiffany-blue
+    border-width: rem(2) 0
+    padding: .5rem 0 1rem 0
+  ul
+    margin-top: 1rem
+  li
+    display: inline
+    a
+      display: inline-block
+      margin-left: 1rem
+    &:first-child a
+      margin-left: 0
+  img
+    margin-top: 1.5rem
+    width: 16%
+  p
+    margin: 1rem 0 0 0
+
+.jslghtbx-caption
+  margin-top: 1rem
