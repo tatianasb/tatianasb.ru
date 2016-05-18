@@ -2,7 +2,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/tatianasb/tatianasb.git"
+    "url": "git://github.com/tatianasb/tatianasb.ru.git"
   },
   "scripts": {
     "js": "uglifyjs bower_components/jsonlylightbox/js/lightbox.js node_modules/smoothscroll/smoothscroll.js assets/js/app.js > assets/js/app.min.js",
