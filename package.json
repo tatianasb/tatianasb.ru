@@ -5,13 +5,19 @@
     "url": "git://github.com/tatianasb/tatianasb.ru.git"
   },
   "scripts": {
-    "js": "uglifyjs bower_components/jsonlylightbox/js/lightbox.js node_modules/smoothscroll/smoothscroll.js assets/js/app.js > assets/js/app.min.js",
-    "fonts": "cp -r bower_components/font-awesome/fonts assets/",
-    "postinstall": "bower install"
+    "js": "uglifyjs node_modules/@bower_components/jsonlylightbox/js/lightbox.js node_modules/smoothscroll/smoothscroll.js assets/js/app.js > assets/js/app.min.js",
+    "fonts": "cp -r node_modules/@bower_components/font-awesome/fonts assets/"
   },
   "dependencies": {
-    "bower": "^1.7.7",
     "smoothscroll": "^0.2.2",
-    "uglify-js": "^2.6.2"
+    "uglify-js": "^2.6.2",
+    "@bower_components/bitters": "thoughtbot/bitters#1.2.0",
+    "@bower_components/bourbon": "thoughtbot/bourbon#>=4.0",
+    "@bower_components/font-awesome": "FortAwesome/Font-Awesome#4.6.3",
+    "@bower_components/jsonlylightbox": "felixhagspiel/jsOnlyLightbox#0.5.3",
+    "@bower_components/neat": "thoughtbot/neat#1.7.4"
+  },
+  "engines": {
+    "yarn": ">= 1.0.0"
   }
 }

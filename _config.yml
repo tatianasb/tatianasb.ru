@@ -8,10 +8,8 @@ languages:
   - title: English
     abbr: en
 
-exclude: 
+exclude:
   - assets/js/app.js
-  - bower.json
-  - bower_components/
   - contrib/
   - Gemfile
   - Gemfile.lock

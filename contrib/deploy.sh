@@ -3,13 +3,13 @@ find . -iname '.DS_Store' -delete
 find . -iname 'Icon*' -delete
 
 echo '\n==> Instaling NodeJS and Bower dependencies'
-npm install
+yarn install
 
 echo '\n==> Generating JavaScript'
-npm run js
+yarn run js
 
 echo '\n==> Copying Font-Awesome font files to assets/'
-npm run fonts
+yarn run fonts
 
 echo '\n==> Generating the site at _site/'
 JEKYLL_ENV=production bundle exec jekyll build
